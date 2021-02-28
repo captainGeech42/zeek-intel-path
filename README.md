@@ -29,5 +29,7 @@ redef Intel::seen_unescaped_uri = T;
 You can also disable alerting on the `original_URI` with the following:
 
 ```zeek
-redef Intel::seen_original_uri = T;
+redef Intel::seen_original_uri = F;
 ```
+
+Be aware that there may be a performance impact when alerting on both URI parameters.

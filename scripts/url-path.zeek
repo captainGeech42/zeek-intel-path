@@ -20,6 +20,18 @@ export {
 event http_request(c: connection, method: string, original_URI: string,
                    unescaped_URI: string, version: string)
     {
+    # don't generate two alerts if both URIs are the same
+    if ( original_URI == unescaped_URI && ( seen_original_uri || seen_unescaped_uri ) )
+        {
+        Intel::seen([
+            $indicator = original_URI,
+            $indicator_type = Intel::URL_PATH,
+            $where = HTTP::IN_URL,
+            $conn = c]);
+
+        return;
+        }
+
     if ( seen_original_uri )
         {
         Intel::seen([

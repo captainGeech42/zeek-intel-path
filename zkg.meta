@@ -1,0 +1,6 @@
+[package]
+description = Extend Intel framework to alert on URL paths
+author = Zander Work (@captainGeech42)
+script_dir = scripts/
+test_command = (cd tests && btest -d)
+tags = http, intel, path, url-path, uri

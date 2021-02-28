@@ -14,7 +14,6 @@ export {
 event http_request(c: connection, method: string, original_URI: string,
                    unescaped_URI: string, version: string)
     {
-    print( original_URI );
     Intel::seen([
         $indicator = original_URI,
         $indicator_type = Intel::URL_PATH,

@@ -1,1 +1,1 @@
-@load ./http-path
+@load ./url-path

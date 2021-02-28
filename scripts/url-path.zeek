@@ -10,7 +10,10 @@ export {
         URL_PATH
     };
 
+    # alert on original_URI
     const seen_original_uri = T &redef;
+    
+    # alert on unescaped_URI
     const seen_unescaped_uri = F &redef;
 }
 

@@ -7,5 +7,5 @@
 #open XXXX-XX-XX-XX-XX-XX
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	seen.indicator	seen.indicator_type	seen.where	seen.node	matched	sources	fuid	file_mime_type	file_desc
 #types	time	string	addr	port	addr	port	string	enum	enum	string	set[enum]	set[string]	string	string	string
-XXXXXXXXXX.XXXXXX	ClEkJM2Vm5giqnMf4h	127.0.0.1	41656	127.0.0.1	8000	/malware	Intel::URL_PATH	HTTP::IN_URL	zeek	Intel::URL_PATH	Test IOC	-	-	-
+XXXXXXXXXX.XXXXXX	C4J4Th3PJpwUYZZ6gc	127.0.0.1	41658	127.0.0.1	8000	/mal-ware	Intel::URL_PATH	HTTP::IN_URL	zeek	Intel::URL_PATH	Test IOC	-	-	-
 #close XXXX-XX-XX-XX-XX-XX

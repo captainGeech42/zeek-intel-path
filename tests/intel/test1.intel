@@ -1,3 +1,0 @@
-#fields	indicator	indicator_type	meta.source
-/this-is-malware.exe	Intel::URL_PATH	Test IOC
-/asdf	Intel::URL_PATH	Test IOC

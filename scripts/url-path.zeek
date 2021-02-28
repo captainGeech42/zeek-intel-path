@@ -9,14 +9,29 @@ export {
     redef enum Intel::Type += {
         URL_PATH
     };
+
+    const seen_original_uri = T &redef;
+    const seen_unescaped_uri = F &redef;
 }
 
 event http_request(c: connection, method: string, original_URI: string,
                    unescaped_URI: string, version: string)
     {
-    Intel::seen([
-        $indicator = original_URI,
-        $indicator_type = Intel::URL_PATH,
-        $where = HTTP::IN_URL,
-        $conn = c]);
+    if ( seen_original_uri )
+        {
+        Intel::seen([
+            $indicator = original_URI,
+            $indicator_type = Intel::URL_PATH,
+            $where = HTTP::IN_URL,
+            $conn = c]);
+        }
+    
+    if ( seen_unescaped_uri )
+        {
+        Intel::seen([
+            $indicator = unescaped_URI,
+            $indicator_type = Intel::URL_PATH,
+            $where = HTTP::IN_URL,
+            $conn = c]);
+        }
     }
